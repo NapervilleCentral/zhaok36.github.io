@@ -1,0 +1,1 @@
+{"isEntrypoint":true,"deps":["flutter|lib/material.dart","flutter_redux|lib/flutter_redux.dart","redux|lib/redux.dart","vision_challenge|lib/game.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":true}
