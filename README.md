@@ -1,3 +1,4 @@
+
 # XC
 Team members: Alan Wandke, Kyle Zhao, Sean Li, Abhinav Bawankule
 
@@ -13,6 +14,3 @@ In review, we are happy with our progress and will continue to build off of our 
 a google doc with important announcments and results, and also an about us page. This will occur during Sprint #2 and following sprints. 
 
 Last Updated: Feb 12th, 2020.
-
-
-
