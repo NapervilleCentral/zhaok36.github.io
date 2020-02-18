@@ -1,16 +1,16 @@
-# the_basics
 
-A new Flutter project.
+# XC
+Team members: Alan Wandke, Kyle Zhao, Sean Li, Abhinav Bawankule
 
-## Getting Started
+GOAL: Our goal for this project is to establish an efficient and easy to navigate cross country website for 
+Naperville Central Men's Cross Country. 
 
-This project is a starting point for a Flutter application.
+We are using HTML, CSS, and Javascript to build the website. Also, we are borrowing css templates and layouts from popular web design pages to improve aesthetics. 
 
-A few resources to get you started if this is your first Flutter project:
+Sprint #1: We set a general framework ("walking skeleton") for the website. It has a nice homepage with a slider bar for navigation, 
+quick links, pictures, and also an embedded twitter feed. 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+In review, we are happy with our progress and will continue to build off of our foundation by adding: a meet information tab, 
+a google doc with important announcments and results, and also an about us page. This will occur during Sprint #2 and following sprints. 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Last Updated: Feb 12th, 2020.
