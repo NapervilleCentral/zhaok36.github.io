@@ -37,6 +37,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 /* Hide the images by default */
 .mySlides {
   display: none;
+  height: 500px;
 }
 
 /* Next & previous buttons */
