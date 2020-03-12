@@ -57,6 +57,9 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
   margin-right: auto;
 }
 
+.baganzflip{
+  transform: rotate(90deg);
+}
 
 /* Next & previous buttons */
 .prev, .next {
@@ -105,6 +108,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
   top: 0;
 }
 
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -142,8 +146,14 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 
 
 
-
-#topbar{background-image: url("images/reddotgradient.jpg")}
+#title{
+  font-size: 30px;
+  bottom: 5px;
+  padding-left: 128px;
+  margin: 0px;
+  font-family: "Arial Black";
+  font-weight: lighter;
+}
 .googledoc{border-style: none; border-left-style: solid; border-left-color: #D5212A; border-left-width: 6px}
 .pic{width:100%}
 /* End extract */
