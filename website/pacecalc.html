@@ -90,36 +90,46 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Custom Pace Calculator</h1>
-      <form id = "custumpaceform">
-        <p> distance 1, time 1 convert to distance 2 time 2 </p>
-        <p> Your Race:  
-        <label for="originaldistance"></label>
+        <p>Enter a base distance and time that you have run. 
+          This will be the pace that is used to calculate the time for a given distance 
+        or the distance for a given amount of time. </p>
+      <form id="custompacecalc">
+        <label for="originaldistance">Your Race:</label>
         <input type="number" id="originaldistance" name="originaldistance">
+        <select id="customunitsi" name="customunitsi">
+            <option value="-1">choose units</option>
+            <option value="meters">meters</option>
+            <option value="miles">miles</option>
+        </select>
+        <p>Your time:</p> 
 
-        <br>
-        Your time:
-        <br>
-        <label for="customhours">Hours:</label>
-        <input type="number" id="customhours" name="customhours">
-        <label for="customminutes">Minutes:</label>
-        <input type="number" id="customminutes" name="customminutes">
-        <label for="customseconds">Seconds:</label>
-        <input type="number" id="customseconds" name="customseconds">
-          
-        Coverted to 
+        <label for="customhoursi">Hours:</label>
+        <input type="number" id="customhoursi" name="customhoursi">
+        <label for="customminutesi">Minutes:</label>
+        <input type="number" id="customminutesi" name="customminutesi">
+        <label for="customsecondsi">Seconds:</label>
+        <input type="number" id="customsecondsi" name="customsecondsi">
+        <p>--------------------------------------------------------------------------</p> 
+        <p>Coverted to</p> 
         <label for="newdistance"></label>
         <input type="text" id="newdistance" name="newdistance">
-        <select id="custompacei" name="custompacei">
+
+        <select id="customunitsf" name="customunitsf">
             <option value="-1">choose units</option>
             <option value="meters">meters</option>
             <option value="miles">miles</option>
           </select>
+        <p>or</p> 
+        <label for="customhoursf">Hours:</label>
+        <input type="number" id="customhoursf" name="customhoursf">
+        <label for="customminutesf">Minutes:</label>
+        <input type="number" id="customminutesf" name="customminutesf">
+        <label for="customsecondsf">Seconds:</label>
+        <input type="number" id="customsecondsf" name="customsecondsf">
         <br><br>
         <input type="button" value = "Calculate!" id="customcalcbutton" name="customcalcbutton"/>
         <br>
-      </p>
       </form>
-        
       <p id="calculatedpace">
         
 
