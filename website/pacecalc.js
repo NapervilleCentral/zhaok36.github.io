@@ -1,8 +1,13 @@
 
 // making the page calculator work 
 //calculate button
-document.getElementById("presetcalcbutton").addEventListener("click", calcPreset);
+document.getElementById("presetcalcbutton").addEventListener("click", atest);
 document.getElementById("customcalcbutton").addEventListener("click", calcCustomPace);
+
+
+function atest(){
+    alert("test");
+}
 
 
 function calcPreset(){
@@ -14,7 +19,7 @@ function calcPreset(){
 function calcCustomPace() {
     var error = false;
     var output = "Error";
-   
+
     var initialrace = document.getElementById("originaldistance").value;
     var initialunits = document.getElementById("customunitsi").value;
 
@@ -29,7 +34,7 @@ function calcCustomPace() {
         //sends an error message for bad inputs 
         error = true;
     }
-    
+
     var sec = document.getElementById("customsecondsi").value; 
     var min = document.getElementById("customminutesi").value;
     var hr = document.getElementById("customhoursi").value;
@@ -37,25 +42,22 @@ function calcCustomPace() {
     var sectotal = parseFloat(hr)*3600 + parseFloat(min)*60 + parseFloat(sec);
     var pace = sectotal/initialrace;//pace in seconds/meter
     
-    //determine which kind of value to calculate
-    var newrace =  document.getElementById("newdistance").value;
+    //determine which kind of value to calculate 
+    var newrace = document.getElementById("newdistance").value;
     var newsec = document.getElementById("customsecondsf").value;
-    var newmin = 
-    var newhr = 
+    var newmin = document.getElementById("customminutesf").value;
+    var newhr = document.getElementById("customhoursf").value;
 
-    alert(hi);
 
-    if(newrace == null && (newsec = null || newmin == null || newhr == null)){
+    if(!newrace  && !(newsec  || newmin || newhr )){
         error = true;
     }
-    else if (newrace == null){
+    else if (!newrace){
         //this will set calcdistance as a default if no boxes are left unfilled
-        output = calcDistance();
-        alert("distance!");
+        output = calcDistance(pace);     
     }
     else{
-        output = calcTime();
-        alert("time!");
+        output = calcTime(pace);
     }
 
 
@@ -69,12 +71,26 @@ function calcCustomPace() {
     
 }
 
-function calcDistance(){
+function calcDistance(pace){
+    var newsec = document.getElementById("customsecondsf").value;
+    var newmin = document.getElementById("customminutesf").value;
+    var newhr = document.getElementById("customhoursf").value;
 
+    var sectotal = parseFloat(newhr)*3600 + parseFloat(newmin)*60 + parseFloat(newsec);
+    var newrace = sectotal/pace; 
+
+    alert(sectotal);
+    alert(newrace);
+    
+
+    var output = "The calculated distance is "+ Math.round(newrace*100)/100+ " meters" +"\n"+
+    "or " + Math.round(newrace / 1609.34 * 100)/100 + " miles.";
+
+    return output;
 
 }
-function calcTime(){
-    var newrace =  document.getElementById("newdistance").value;
+function calcTime(pace){
+    var newrace = document.getElementById("newdistance").value;
     var newtime = pace*newrace;
 
     var newhr = Math.floor(parseFloat(newtime)/3600);
@@ -86,12 +102,13 @@ function calcTime(){
     }
 
     if (newhr==0){
-        output = "the calculated time is "+newmin+":"+newsec;
+        var output = "the calculated time is "+newmin+":"+newsec;
     }
     else{
         if (newmin<=9){
             newmin = ""+0+newmin;
         }
-        output = "the calculated time is " + newhr +":"+newmin+":"+newsec;
+       var  output = "the calculated time is " + newhr +":"+newmin+":"+newsec;
     }
+    return output;
 }
