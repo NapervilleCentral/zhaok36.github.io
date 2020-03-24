@@ -65,23 +65,23 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row w3-padding-main">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Preset Pace Calculator</h1>
-      <p id = "firstp"> a description</p>
-      <form id="calcform">
-          <select id="custompacei" name="custompacei">
-              <option value="-1">choose pace</option>
-              <option value="800">800</option>
-              <option value="1600">1600</option>         
-              <option value="mile">mile</option>
-              <option value="two mile">two mile</option>
-              <option value="three mile">three mile</option>
-              <option value="CV">CV</option>
-              <option value="tempo">tempo</option>
-              <option value="upbeat">upbeat</option>
-              <option value="go by feel">"go by feel"</option>
+      <p id = "firstp"> Enter your official race time to calculate your paces. Does not work.</p>
+      <div class = "w3-light-grey">
+            <select id="racedistance" name="racedistance">
+              <option value="-1">choose a race</option>
+              <option value="800">800 or half mile</option>
+              <option value="1600">1600 or mile</option>         
+              <option value="3200">3200 or two mile</option>
+              <option value="4800">4800 or three mile</option>
             </select>
+          <label for="customhoursi">Minutes:</label>
+          <input type="number" id="initialmin" name="initialmin">
+          <label for="customminutesi">Seconds:</label>
+          <input type="number" id="initialsec" name="initialsec">
         <br>
+        <p id = "presetcalculation"> Your paces will appear here.</p>
         <input type="button" value="Calculate!" id="presetcalcbutton"/>
-      </form>
+          </div>
     </div>
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
@@ -94,7 +94,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       <h1 class="w3-text-teal">Custom Pace Calculator</h1>
         <p>Enter a base distance and time that you have run. 
           This will be the pace that is used to calculate the time for a given distance 
-        or the distance for a given amount of time. </p>
+        or the distance for a given amount of time. Works mostly.</p>
       <form id="custompacecalc">
         <label for="originaldistance">Your Race:</label>
         <input type="number" id="originaldistance" name="originaldistance">
