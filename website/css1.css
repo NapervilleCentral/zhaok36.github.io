@@ -157,6 +157,10 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 .googledoc{border-style: none; border-left-style: solid; border-left-color: #D5212A; border-left-width: 6px}
 .pic{width:100%}
 .bar-background{background-image: url("images/XCGradient2.JPG");color: #ffffff;}
+.runner-background{background-image: url("images/Ganzrunner.png"); background-repeat:no-repeat; background-attachment: fixed; background-position: top right;}
+.calc-background{background-color: #948d8d; padding: 10px; border: 10px; border-radius:10px;}
+.special-font1{font-size:large; text-align: center; font-family:"Comic Sans MS";}
+
 
 /* End extract */
 html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}

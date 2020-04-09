@@ -60,13 +60,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<div class="w3-main" style="margin-left:250px">
+<div class="w3-main runner-background" style="margin-left:250px">
 
   <div class="w3-row w3-padding-main">
-    <div class="w3-twothird w3-container">
+    <div class="w3-container w3-threequarter">
       <h1 class="w3-text-teal">Preset Pace Calculator</h1>
+      <div class = "calc-background">
       <p id = "firstp"> Enter your official race time to calculate your paces. Does not work.</p>
-      <div class = "w3-light-grey">
             <select id="racedistance" name="racedistance">
               <option value="-1">choose a race</option>
               <option value="800">800 or half mile</option>
@@ -79,19 +79,25 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
           <label for="customminutesi">Seconds:</label>
           <input type="number" id="initialsec" name="initialsec">
         <br>
-        <p id = "presetcalculation"> Your paces will appear here.</p>
+        <div id ="presettable" class = "w3-red">
+          <div>
+            <p id = "presetcalculation"> Your paces will appear here.</p>
+          </div>
+        </div>
         <input type="button" value="Calculate!" id="presetcalcbutton"/>
           </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
+    <div class = "w3-container w3-padding-64 w3-quarter w3-text-red">
+      <p class = "special-font1">A special Baganz Quote</p>
+      <p>~ Grant Baganz ~</p>
+    </div>  
+
   </div>
 
   <div class="w3-row">
-    <div class="w3-twothird w3-container">
+    <div class="w3-threequarter w3-container">
       <h1 class="w3-text-teal">Custom Pace Calculator</h1>
+    <div class = "calc-background">
         <p>Enter a base distance and time that you have run. 
           This will be the pace that is used to calculate the time for a given distance 
         or the distance for a given amount of time. Works mostly.</p>
@@ -111,7 +117,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
         <input type="number" id="customminutesi" name="customminutesi">
         <label for="customsecondsi">Seconds:</label>
         <input type="number" id="customsecondsi" name="customsecondsi">
+        </div>
         <p>--------------------------------------------------------------------------</p> 
+      <div class = "calc-background">
         <p>Coverted to</p> 
         <label for="newdistance"></label>
         <input type="text" id="newdistance" name="newdistance">
@@ -136,27 +144,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
         
 
       </p>
+      </div>
+  
 
 
-        
-
-        
-      
-
-        
-
-
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
     </div>
   </div>
 
   
 
   <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-32">
+    <div class="w3-container w3-theme-l2 w3-padding-32 w3-margin-top">
       <h4>Footer</h4>
     </div>
 

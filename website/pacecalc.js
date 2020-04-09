@@ -25,13 +25,30 @@ function calcPreset() {
     else {
         var seconds = parseFloat(initialmin) * 60 + parseFloat(initialsec);
         var pace = seconds / initialrace; //in seconds per meter
-        var miletime = 1600 * pace;
+        var miletime = 1600 * pace; // in seconds
+        
+        var time800 = (miletime-30)/2;
+        var twomiletime = (miletime + 20); 
+        var threemiletime = (miletime + 35);
+        var CVtime = miletime + 45;
+        var tempotime = miletime + 60; 
+        var upbeatmin = miletime + 90; 
 
         var mile300 = miletime / 1600 * 300;
         var mile400 = miletime / 1600 * 400;
         var mile600 = miletime / 1600 * 600;
-
         output += "mile paces: 300 in " + mile300 + " | 400 in " + mile400 + " | 600 in " + mile600 + ".\n";
+        
+        var twomile600 = twomiletime / 1600 * 600;
+        var twomile800 = twomiletime / 1600 * 800;
+        var twomile1000 = twomiletime / 1600 * 1000;
+        var twomile1200 = twomiletime / 1600 * 1200;
+        var twomile1600 = twomiletime / 1600 * 1600;
+        output += "two mile paces (VO2): 600 in " + twomile600 + " | 800 in " + twomile800 + " | 1000 in " + twomile1000 + 
+        " | 1200 in " + twomile1200 + " | 1600 in " + twomile1600 +  ".\n"; 
+
+
+
     }
 
 
