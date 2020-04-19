@@ -160,7 +160,9 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 .runner-background{background-image: url("images/Ganzrunner.png"); background-repeat:no-repeat; background-attachment: fixed; background-position: top right;}
 .calc-background{background-color: #948d8d; padding: 10px; border: 10px; border-radius:10px;}
 .special-font1{font-size:large; text-align: center; font-family:"Comic Sans MS";}
-.basic-border{border-width: 2px; border-style: solid; border-color: #000;}
+.basic-border{border-width: 1px; border-style: solid; border-color: #000;}
+.basic-border-round{border-width: 3px; border-style: solid; border-color: #000;border-radius:8px;}
+.pacecalctable{column-count: 6; column-gap: 20px; column-rule: 2px solid black;}
 
 
 /* End extract */

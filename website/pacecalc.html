@@ -79,23 +79,46 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
           <label for="customminutesi">Seconds:</label>
           <input type="number" id="initialsec" name="initialsec">
         <br>
-        <div id ="presettable" class = "w3-red basic-border w3-margin">
-          <div id = "row1" class = "w3-row w3-padding-small basic-border">
-            <div id="r1c1" class = "w3-col.s2">
-              <p></p>
-            </div>
-            <div id = "r1c2" class = "w3-col.s2">
-              Distance1
-            </div>
+        <h5>Calculated paces will appear in the chart below</h5>
+        <div id ="presettable" class = "w3-red basic-border-round">
+          <div id = "row1" class = " basic-border pacecalctable">
+            <h6>
+              Pace Table
+            </h6>
+            <h6>1st Distance</h6>
+            <h6>2nd Distance</h6>
+            <h6>3rd Distance</h6>
+            <h6>4th Distance</h6>
+            <h6>Race Distance</h6>
           </div>
-          <div id = "row2">
-            Pace 1
+          <div id = "row2" class = "basic-border">
+            <h6>800 Pace</h6>
+            <p id = "8001"></p>
+            <p id = "8002"></p>
+            <p id = "8003"></p>
           </div> 
-          <div id = "row3">
-          Pace 2
+          <div id = "row3" class = "basic-border">
+            <h6>1600 Pace</h6>
+            <p id = "16001"></p>
+            <p id = "16002"></p>
+            <p id = "16003"></p>
           </div> 
-          <div id = "row4">
-
+          <div id = "row4" class = "basic-border">
+            <h6>3200 Pace</h6>
+          </div>
+          <div id = "row5" class = "basic-border">
+            <h6>Three Mile Pace</h6>
+          </div>
+          <div id = "row6" class = "basic-border">
+            <h6>CV Pace</h6>
+          </div>
+          <div id = "row7" class = "basic-border">
+            <h6>Tempo Pace</h6>
+            <p id = "tempo1"></p>
+          </div>
+          <div id = "row8" class = "basic-border">
+            <h6>Upbeat Pace</h6>
+            <p id = "upbeat1"></p>
           </div>
         </div>
         <p id = "presetcalculation">paces appear here right now</p>

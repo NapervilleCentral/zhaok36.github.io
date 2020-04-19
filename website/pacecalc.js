@@ -64,6 +64,11 @@ function calcPreset() {
         var tempotime = miletime + 60; 
         var upbeattime = miletime + 90; 
 
+        var half200 = time800/4;
+        var half250 = time800/800 *250;
+        var half500 = time800/800 * 500;
+        var halfrace = time800;
+
         var mile300 = miletime / 1600 * 300;
         var mile400 = miletime / 1600 * 400;
         var mile600 = miletime / 1600 * 600;
@@ -99,7 +104,10 @@ function calcPreset() {
         alert("Error: please fill in all appropriate boxes.")
     }
     else {
+        //test
         document.getElementById("presetcalculation").innerHTML = output;
+        //actual
+        document.getElementById("8001").innerHTML = "150 in"
     }
 }
 
