@@ -107,7 +107,13 @@ function calcPreset() {
         //test
         document.getElementById("presetcalculation").innerHTML = output;
         //actual
-        document.getElementById("8001").innerHTML = "150 in"
+        alert("hi");
+        document.getElementById("8004").innerHTML = "heyheyhey!"
+        document.getElementById("8001").innerHTML = "200 in " + parseString(secToMinSec(half200));
+        document.getElementById("8002").innerHTML = "250 in " + parseString(secToMinSec(half250));
+        document.getElementById("8003").innerHTML = "500 in " + parseString(secToMinSec(half500));
+        document.getElementById("800race").innerHTML = "race time: " + parseString(secToMinSec(halfrace));
+        
     }
 }
 
