@@ -234,7 +234,17 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 .pic{width:100%}
 .bar-background{/*background-image: url("images/XCGradient3.JPG");*/ background-image: linear-gradient(black,#f72d2d); color: #ffffff;}
 
-/*stuff made for pace calc page*/
+/*pace calc table layout*/
+#preset-table { display:table;}
+#header-row {display:table-header-group;font-weight:bold;font-size: 15px;}
+.table-head-cell{display:table-cell;padding:10px;border-bottom: 2px solid black;border-left: 2px solid black;}
+#table-body{display:table-row-group;}
+.table-row{display:table-row;}
+.table-cell-left{display:table-cell; font-weight: bold; padding-left:4px; border-left: 2px solid black;border-bottom: 2px solid black;}
+.table-cell-2{display:table-cell;padding-left: 2px; border-bottom: 2px solid black;border-left: 2px solid black;}
+.table-cell{display:table-cell;padding-left: 2px; border-bottom: 2px solid black;border-left: 1px solid black;}
+
+/*other stuff for pace calc*/
 .runner-background{background-image: url("images/Ganzrunner.png"); background-repeat:no-repeat; background-attachment: fixed; background-position: top right;}
 .calc-background{background-color: #948d8d; padding: 10px; border: 10px; border-radius:10px;}
 .special-font1{font-size:large; text-align: center; font-family:"Comic Sans MS";}
