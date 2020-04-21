@@ -260,6 +260,17 @@ h1{
   border-radius:15px;
 }
 
+
+/*spreadsheets for legacy page STATE results*/
+.stater{
+  width: 32%; margin-left:100px;overflow-y:hidden; height: 245px;
+}
+ 
+
+
+
+
+
 /* End extract */
 html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.w3-serif{font-family:serif}
