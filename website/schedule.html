@@ -21,17 +21,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <!-- This was taken from W3Schools https://www.w3schools.com/w3css/w3css_templates.asp Web Page Template and adapted for our purposes-->
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-top w3-left-align w3-large">
-    <img class="w3-bar-item w3-theme-l1" src = "eagle4.jpg" alt = "NCHS">
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
-    <a href="schedule.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Schedule</a>
-    <a href="roster.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Roster</a>
-    <a href="results.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Results</a>
-    <a href="pacecalc.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Pace Calculator</a>
-    <a href="fun.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Fun page</a>
-    <a href="legacy.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Legacy (Past)</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+  <div id = "bar" class="w3-bar bar-background w3-top w3-left-align w3-large">
+    <img id = "logo" class="w3-bar-item w3-theme-l1" src = "eagle4.jpg" alt = "NCHS">
+    <!--Menu button-->
+    <a id = "menubutton" class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="schedule.html" class="w3-bar-item w3-button w3-hover-white">Schedule</a>
+    <a href="roster.html" class="w3-bar-item w3-button w3-hover-white">Roster</a>
+    <a href="results.html" class="w3-bar-item w3-button w3-hover-white">Results</a>
+    <a href="pacecalc.html" class="w3-bar-item w3-button w3-hover-white">Pace Calculator</a>
+    <a href="fun.html" class="w3-bar-item w3-button w3-hover-white">Fun page</a>
+    <a href="legacy.html" class="w3-bar-item w3-button w3-hover-white">Legacy</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hover-white">About Us</a>
+    <br><br>
+    <p id = "title">Naperville Central High School Cross Country</p>
   </div>
 </div>
 
@@ -62,34 +66,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Schedule</h1>
       <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ff4040&amp;ctz=America%2FChicago&amp;src=bmFwZXJ2aWxsZTIwMy5vcmdfNTQwZDBpaWRwa28zamR2ZjdhdWw4cDZkYXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D81B60&amp;mode=MONTH" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-    <div class="w3-third w3-container">
-      <!--<p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>-->
-     <!-- <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>-->
-    </div>
-  </div>
-
-  <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <!--<p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>-->
-      <!--<p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>-->
-    </div>
-  </div>
-
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
     </div>
   </div>
 

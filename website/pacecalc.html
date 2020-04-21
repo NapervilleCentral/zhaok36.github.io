@@ -23,17 +23,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <!-- This was taken from W3Schools https://www.w3schools.com/w3css/w3css_templates.asp Web Page Template and adapted for our purposes-->
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-top w3-left-align w3-large">
-    <img class="w3-bar-item w3-theme-l1" src = "eagle4.jpg" alt = "NCHS">
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
-    <a href="schedule.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Schedule</a>
-    <a href="roster.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Roster</a>
-    <a href="results.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Results</a>
-    <a href="pacecalc.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Pace Calculator</a>
-    <a href="fun.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Fun page</a>
-    <a href="legacy.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Legacy (Past)</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+  <div id = "bar" class="w3-bar bar-background w3-top w3-left-align w3-large">
+    <img id = "logo" class="w3-bar-item w3-theme-l1" src = "eagle4.jpg" alt = "NCHS">
+    <!--Menu button-->
+    <a id = "menubutton" class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="schedule.html" class="w3-bar-item w3-button w3-hover-white">Schedule</a>
+    <a href="roster.html" class="w3-bar-item w3-button w3-hover-white">Roster</a>
+    <a href="results.html" class="w3-bar-item w3-button w3-hover-white">Results</a>
+    <a href="pacecalc.html" class="w3-bar-item w3-button w3-hover-white">Pace Calculator</a>
+    <a href="fun.html" class="w3-bar-item w3-button w3-hover-white">Fun page</a>
+    <a href="legacy.html" class="w3-bar-item w3-button w3-hover-white">Legacy</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hover-white">About Us</a>
+    <br><br>
+    <p id = "title">Naperville Central High School Cross Country</p>
   </div>
 </div>
 
@@ -58,93 +62,167 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<div class="w3-main" style="margin-left:250px">
+<div class="w3-main runner-background" style="margin-left:250px">
 
   <div class="w3-row w3-padding-main">
-    <div class="w3-twothird w3-container">
+    <div class="w3-container w3-threequarter">
       <h1 class="w3-text-teal">Preset Pace Calculator</h1>
-      <p id = "firstp"> a description</p>
-      <form id="calcform">
-          <select id="custompacei" name="custompacei">
-              <option value="-1">choose pace</option>
-              <option value="800">800</option>
-              <option value="1600">1600</option>         
-              <option value="mile">mile</option>
-              <option value="two mile">two mile</option>
-              <option value="three mile">three mile</option>
-              <option value="CV">CV</option>
-              <option value="tempo">tempo</option>
-              <option value="upbeat">upbeat</option>
-              <option value="go by feel">"go by feel"</option>
+      <div class = "calc-background">
+      <p id = "firstp"> Enter your official race time to calculate your paces. works mostly.</p>
+            <select id="racedistance" name="racedistance">
+              <option value="-1">choose a race</option>
+              <option value="800">800 or half mile</option>
+              <option value="1600">1600 or mile</option>         
+              <option value="3200">3200 or two mile</option>
+              <option value="4800">4800 or three mile</option>
             </select>
-        <br>
+          <label for="customhoursi">Minutes:</label>
+          <input type="number" id="initialmin" name="initialmin">
+          <label for="customminutesi">Seconds:</label>
+          <input type="number" id="initialsec" name="initialsec">
         <input type="button" value="Calculate!" id="presetcalcbutton"/>
-      </form>
+        <br>
+        <h5>Calculated paces will appear in the chart below</h5>
+        <p>note: these paces are based off of general estimates, they will not be necesarilly accurate for every person at every distance</p>
+        <div id ="preset-table" class = "w3-red basic-border-round">
+          <div id = "header-row" class = "basic-border pacecalctable">  
+            <div id = "head0" class = "table-head-cell"></div>
+            <div id = "head1" class = "table-head-cell">Distance 1</div>  
+            <div id = "head2" class = "table-head-cell">Distance 2</div>  
+            <div id = "head3" class = "table-head-cell">Distance 3</div>  
+            <div id = "head4" class = "table-head-cell">Distance 4</div>  
+            <div id = "head5" class = "table-head-cell">Race Distance</div>           
+          </div>
+          <div id = "table-body">
+            <div id = "row1" class = "table-row">  
+              <div id ="1-1" class = "table-cell-left">800  Pace</div>
+              <div id ="1-2" class = "table-cell-2"></div> 
+              <div id ="1-3" class = "table-cell"></div> 
+              <div id ="1-4" class = "table-cell"></div> 
+              <div id ="1-5" class = "table-cell"></div> 
+              <div id ="1-6" class = "table-cell"></div>         
+            </div> 
+            <div id = "row2" class = "table-row">  
+              <div id ="2-1" class = "table-cell-left">1600 Pace</div>
+              <div id ="2-2" class = "table-cell-2"></div> 
+              <div id ="2-3" class = "table-cell"></div> 
+              <div id ="2-4" class = "table-cell"></div> 
+              <div id ="2-5" class = "table-cell"></div> 
+              <div id ="2-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row3" class = "table-row">  
+              <div id ="3-1" class = "table-cell-left">3200  Pace</div>
+              <div id ="3-2" class = "table-cell-2"></div> 
+              <div id ="3-3" class = "table-cell"></div> 
+              <div id ="3-4" class = "table-cell"></div> 
+              <div id ="3-5" class = "table-cell"></div> 
+              <div id ="3-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row4" class = "table-row">  
+              <div id ="4-1" class = "table-cell-left">Three Mile Pace</div>
+              <div id ="4-2" class = "table-cell-2"></div> 
+              <div id ="4-3" class = "table-cell"></div> 
+              <div id ="4-4" class = "table-cell"></div> 
+              <div id ="4-5" class = "table-cell"></div> 
+              <div id ="4-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row5" class = "table-row">  
+              <div id ="5-1" class = "table-cell-left">CV Pace</div>
+              <div id ="5-2" class = "table-cell-2"></div> 
+              <div id ="5-3" class = "table-cell"></div> 
+              <div id ="5-4" class = "table-cell"></div> 
+              <div id ="5-5" class = "table-cell"></div> 
+              <div id ="5-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row6" class = "table-row">  
+              <div id ="6-1" class = "table-cell-left">Tempo Pace</div>
+              <div id ="6-2" class = "table-cell-2"></div> 
+              <div id ="6-3" class = "table-cell"></div> 
+              <div id ="6-4" class = "table-cell"></div> 
+              <div id ="6-5" class = "table-cell"></div> 
+              <div id ="6-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row7" class = "table-row">  
+              <div id ="7-1" class = "table-cell-left">Upbeat Pace</div>
+              <div id ="7-2" class = "table-cell-2"></div> 
+              <div id ="7-3" class = "table-cell"></div> 
+              <div id ="7-4" class = "table-cell"></div> 
+              <div id ="7-5" class = "table-cell"></div> 
+              <div id ="7-6" class = "table-cell"></div>          
+            </div>
+          </div>
+        </div>
+        <!--end table-->
+      </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
+    <div class = "w3-container w3-padding-64 w3-quarter w3-text-red">
+      <p class = "special-font1">A special Baganz Quote</p>
+      <p>~ Grant Baganz ~</p>
+    </div>  
+
   </div>
 
   <div class="w3-row">
-    <div class="w3-twothird w3-container">
+    <div class="w3-threequarter w3-container">
       <h1 class="w3-text-teal">Custom Pace Calculator</h1>
-      <form id = "custumpaceform">
-        <p> distance 1, time 1 convert to distance 2 time 2 </p>
-        <p> Your Race:  
-        <label for="originaldistance"></label>
+    <div class = "calc-background">
+        <p>Enter a base distance and time that you have run. 
+          This will be the pace that is used to calculate the time for a given distance 
+        or the distance for a given amount of time. Works mostly.</p>
+      <form id="custompacecalc">
+        <label for="originaldistance">Your Race:</label>
         <input type="number" id="originaldistance" name="originaldistance">
+        <select id="customunitsi" name="customunitsi">
+            <option value="-1">choose units</option>
+            <option value="meters">meters</option>
+            <option value="miles">miles</option>
+        </select>
+        <p>Your time:</p> 
 
-        <br>
-        Your time:
-        <br>
-        <label for="customhours">Hours:</label>
-        <input type="number" id="customhours" name="customhours">
-        <label for="customminutes">Minutes:</label>
-        <input type="number" id="customminutes" name="customminutes">
-        <label for="customseconds">Seconds:</label>
-        <input type="number" id="customseconds" name="customseconds">
-          
-        Coverted to 
+        <label for="customhoursi">Hours:</label>
+        <input type="number" id="customhoursi" name="customhoursi">
+        <label for="customminutesi">Minutes:</label>
+        <input type="number" id="customminutesi" name="customminutesi">
+        <label for="customsecondsi">Seconds:</label>
+        <input type="number" id="customsecondsi" name="customsecondsi">
+        </div>
+        <p>--------------------------------------------------------------------------</p> 
+      <div class = "calc-background">
+        <p>Coverted to</p> 
         <label for="newdistance"></label>
         <input type="text" id="newdistance" name="newdistance">
-        <select id="custompacei" name="custompacei">
+
+        <select id="customunitsf" name="customunitsf">
             <option value="-1">choose units</option>
             <option value="meters">meters</option>
             <option value="miles">miles</option>
           </select>
+        <p>or</p> 
+        <label for="customhoursf">Hours:</label>
+        <input type="number" id="customhoursf" name="customhoursf">
+        <label for="customminutesf">Minutes:</label>
+        <input type="number" id="customminutesf" name="customminutesf">
+        <label for="customsecondsf">Seconds:</label>
+        <input type="number" id="customsecondsf" name="customsecondsf">
         <br><br>
         <input type="button" value = "Calculate!" id="customcalcbutton" name="customcalcbutton"/>
         <br>
-      </p>
       </form>
-        
       <p id="calculatedpace">
         
 
       </p>
+      </div>
+  
 
 
-        
-
-        
-      
-
-        
-
-
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
     </div>
   </div>
 
   
 
   <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-32">
+    <div class="w3-container w3-theme-l2 w3-padding-32 w3-margin-top">
       <h4>Footer</h4>
     </div>
 
