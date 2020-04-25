@@ -227,8 +227,8 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
   bottom: 5px;
   padding-left: 128px;
   margin: 0px;
-  font-family: "Arial Black";
-  font-weight: lighter;
+  font-family: "Arial";
+  font-weight: 900;
 }
 .googledoc{border-style: none; border-left-style: solid; border-left-color: #D5212A; border-left-width: 6px}
 .pic{width:100%}
