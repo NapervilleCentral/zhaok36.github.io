@@ -13,12 +13,17 @@ function secToMinSec(totalseconds){
     var output = "";
 
     if (totalseconds <=90){
-        output = totalseconds;
+        output = Math.round(totalseconds*100)/100;
     }
     else{
-        var minutes = totalseconds%60;
+        var minutes = Math.floor(totalseconds/60);
         var seconds = totalseconds-(minutes*60);
-        output = parseString(minutes) + ":" + parseString(seconds);
+        
+        seconds= Math.round(seconds*100)/100;
+        if (seconds<10){
+            seconds = "0"+seconds;
+        }
+        output = minutes + ":" + seconds;
     }
 
     return output;
@@ -26,7 +31,6 @@ function secToMinSec(totalseconds){
 
 function calcPreset() {
     var error = false;
-    var output = "";
 
     var initialrace = document.getElementById("racedistance").value;
     var initialmin = document.getElementById("initialmin").value;
@@ -62,26 +66,23 @@ function calcPreset() {
         var threemiletime = (miletime + 35);
         var CVtime = miletime + 45;
         var tempotime = miletime + 60; 
-        var upbeattime = miletime + 90; 
+        var upbeattime = miletime + 105; 
 
         var half200 = time800/4;
         var half250 = time800/800 *250;
-        var half500 = time800/800 * 500;
+        var half400 = time800/800 * 400;
         var halfrace = time800;
 
         var mile300 = miletime / 1600 * 300;
         var mile400 = miletime / 1600 * 400;
         var mile600 = miletime / 1600 * 600;
         var milerace = miletime;
-        output += "mile paces: 300 in " + mile300 + " | 400 in " + mile400 + " | 600 in " + mile600 + " | 1600 in "+ milerace +".\n";
         
         var twomile800 = twomiletime / 1600 * 800;
         var twomile1000 = twomiletime / 1600 * 1000;
         var twomile1200 = twomiletime / 1600 * 1200;
         var twomile1600 = twomiletime;
         var twomilerace = twomiletime * 2;
-        output += "two mile paces (VO2): 800 in " + twomile800 + " | 1000 in " + twomile1000 + 
-        " | 1200 in " + twomile1200 + " | 1600 in " + twomile1600 +  ".\n"; 
 
         var threemile1000 = threemiletime / 1600 *1000;
         var threemile1200 = threemiletime / 1600 * 1200;
@@ -104,16 +105,36 @@ function calcPreset() {
         alert("Error: please fill in all appropriate boxes.")
     }
     else {
-        //test
-        document.getElementById("presetcalculation").innerHTML = output;
-        //actual
-        alert("hi");
-        document.getElementById("8004").innerHTML = "heyheyhey!"
-        document.getElementById("8001").innerHTML = "200 in " + parseString(secToMinSec(half200));
-        document.getElementById("8002").innerHTML = "250 in " + parseString(secToMinSec(half250));
-        document.getElementById("8003").innerHTML = "500 in " + parseString(secToMinSec(half500));
-        document.getElementById("800race").innerHTML = "race time: " + parseString(secToMinSec(halfrace));
+        //output, is there a better way?
+        document.getElementById("1-2").innerHTML = "200 in " +secToMinSec(half200);
+        document.getElementById("1-3").innerHTML = "250 in " + secToMinSec(half250);
+        document.getElementById("1-4").innerHTML = "400 in " + secToMinSec(half400);
+        document.getElementById("1-6").innerHTML = "race time: " + secToMinSec(halfrace);
+
+        document.getElementById("2-2").innerHTML = "300 in " +secToMinSec(mile300);
+        document.getElementById("2-3").innerHTML = "400 in " + secToMinSec(mile400);
+        document.getElementById("2-4").innerHTML = "600 in " + secToMinSec(mile600);
+        document.getElementById("2-6").innerHTML = "race time: " + secToMinSec(milerace);
+
+        document.getElementById("3-2").innerHTML = "800 in " +secToMinSec(twomile800);
+        document.getElementById("3-3").innerHTML = "1000 in " + secToMinSec(twomile1000);
+        document.getElementById("3-4").innerHTML = "1200 in " + secToMinSec(twomile1200);
+        document.getElementById("3-5").innerHTML = "1600 in " + secToMinSec(twomile1600);
+        document.getElementById("3-6").innerHTML = "race time: " + secToMinSec(twomilerace);
+
+        document.getElementById("4-2").innerHTML = "1000 in " +secToMinSec(threemile1000);
+        document.getElementById("4-3").innerHTML = "1200 in " + secToMinSec(threemile1200);
+        document.getElementById("4-4").innerHTML = "1600 in " + secToMinSec(threemile1600);
+        document.getElementById("4-5").innerHTML = "1.5 mile in " + secToMinSec(threemile2400);
+        document.getElementById("4-6").innerHTML = "race time: " + secToMinSec(threemilerace);
         
+        document.getElementById("5-2").innerHTML = "800 in " +secToMinSec(CV800);
+        document.getElementById("5-3").innerHTML = "1000 in " + secToMinSec(CV1000);
+        document.getElementById("5-4").innerHTML = "1200 in " + secToMinSec(CV1200);
+        document.getElementById("5-5").innerHTML = "1600 in " + secToMinSec(CV1600);
+
+        document.getElementById("6-2").innerHTML = "1600 in " +secToMinSec(tempo1600);
+        document.getElementById("7-2").innerHTML = "1600 in " +secToMinSec(upbeat1600);
     }
 }
 

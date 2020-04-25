@@ -68,7 +68,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-container w3-threequarter">
       <h1 class="w3-text-teal">Preset Pace Calculator</h1>
       <div class = "calc-background">
-      <p id = "firstp"> Enter your official race time to calculate your paces. Does not work.</p>
+      <p id = "firstp"> Enter your official race time to calculate your paces. works mostly.</p>
             <select id="racedistance" name="racedistance">
               <option value="-1">choose a race</option>
               <option value="800">800 or half mile</option>
@@ -81,65 +81,79 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
           <label for="customminutesi">Seconds:</label>
           <input type="number" id="initialsec" name="initialsec">
         <input type="button" value="Calculate!" id="presetcalcbutton"/>
-        <p id = "presetcalculation">paces appear here right now</p>
         <br>
         <h5>Calculated paces will appear in the chart below</h5>
-        <div id ="presettable" class = "w3-red basic-border-round">
-          <div id = "row1" class = " basic-border pacecalctable">
-            <h6>
-              Pace Table
-            </h6>
-            <h6>1st Distance</h6>
-            <h6>2nd Distance</h6>
-            <h6>3rd Distance</h6>
-            <h6>4th Distance</h6>
-            <h6>Race Distance</h6>
+        <p>note: these paces are based off of general estimates, they will not be necesarilly accurate for every person at every distance</p>
+        <div id ="preset-table" class = "w3-red basic-border-round">
+          <div id = "header-row" class = "basic-border pacecalctable">  
+            <div id = "head0" class = "table-head-cell"></div>
+            <div id = "head1" class = "table-head-cell">Distance 1</div>  
+            <div id = "head2" class = "table-head-cell">Distance 2</div>  
+            <div id = "head3" class = "table-head-cell">Distance 3</div>  
+            <div id = "head4" class = "table-head-cell">Distance 4</div>  
+            <div id = "head5" class = "table-head-cell">Race Distance</div>           
           </div>
-          <div id = "row2" class = "pacecalctable basic-border">
-            <h6>800 Pace</h6>
-            <p id = "8001">1</p>
-            <p id = "8002">2</p>
-            <p id = "8003">3</p>
-            <p id = "8004">4</p>
-            <p id = "800race">race</p>
-          </div> 
-          <div id = "row3" class = " pacecalctable basic-border">
-            <h6>1600 Pace</h6>
-            <p id = "16001">1</p>
-            <p id = "16002">2</p>
-            <p id = "16003">3</p>
-            <p id = "16004">4</p>
-            <p id = "1600race">race</p>
-          </div> 
-          <div id = "row4" class = "pacecalctable basic-border">
-            <h6>3200 Pace</h6>
-            <p id = "32001">1</p>
-            <p id = "32002">2</p>
-            <p id = "32003">3</p>
-            <p id = "32004">4</p>
-            <p id = "3200race">race</p>
-          </div>
-          <div id = "row5" class = "pacecalctable basic-border">
-            <h6>Three Mile Pace</h6>
-            <p id = "48001">1</p>
-            <p id = "48002">2</p>
-            <p id = "48003">3</p>
-            <p id = "48004">4</p>
-            <p id = "4800race">race</p>
-          </div>
-          <div id = "row6" class = "pacecalctable basic-border">
-            <h6>CV Pace</h6>
-          </div>
-          <div id = "row7" class = "pacecalctable basic-border">
-            <h6>Tempo Pace</h6>
-            <p id = "tempo1"></p>
-          </div>
-          <div id = "row8" class = "pacecalctable basic-border">
-            <h6>Upbeat Pace</h6>
-            <p id = "upbeat1"></p>
+          <div id = "table-body">
+            <div id = "row1" class = "table-row">  
+              <div id ="1-1" class = "table-cell-left">800  Pace</div>
+              <div id ="1-2" class = "table-cell-2"></div> 
+              <div id ="1-3" class = "table-cell"></div> 
+              <div id ="1-4" class = "table-cell"></div> 
+              <div id ="1-5" class = "table-cell"></div> 
+              <div id ="1-6" class = "table-cell"></div>         
+            </div> 
+            <div id = "row2" class = "table-row">  
+              <div id ="2-1" class = "table-cell-left">1600 Pace</div>
+              <div id ="2-2" class = "table-cell-2"></div> 
+              <div id ="2-3" class = "table-cell"></div> 
+              <div id ="2-4" class = "table-cell"></div> 
+              <div id ="2-5" class = "table-cell"></div> 
+              <div id ="2-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row3" class = "table-row">  
+              <div id ="3-1" class = "table-cell-left">3200  Pace</div>
+              <div id ="3-2" class = "table-cell-2"></div> 
+              <div id ="3-3" class = "table-cell"></div> 
+              <div id ="3-4" class = "table-cell"></div> 
+              <div id ="3-5" class = "table-cell"></div> 
+              <div id ="3-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row4" class = "table-row">  
+              <div id ="4-1" class = "table-cell-left">Three Mile Pace</div>
+              <div id ="4-2" class = "table-cell-2"></div> 
+              <div id ="4-3" class = "table-cell"></div> 
+              <div id ="4-4" class = "table-cell"></div> 
+              <div id ="4-5" class = "table-cell"></div> 
+              <div id ="4-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row5" class = "table-row">  
+              <div id ="5-1" class = "table-cell-left">CV Pace</div>
+              <div id ="5-2" class = "table-cell-2"></div> 
+              <div id ="5-3" class = "table-cell"></div> 
+              <div id ="5-4" class = "table-cell"></div> 
+              <div id ="5-5" class = "table-cell"></div> 
+              <div id ="5-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row6" class = "table-row">  
+              <div id ="6-1" class = "table-cell-left">Tempo Pace</div>
+              <div id ="6-2" class = "table-cell-2"></div> 
+              <div id ="6-3" class = "table-cell"></div> 
+              <div id ="6-4" class = "table-cell"></div> 
+              <div id ="6-5" class = "table-cell"></div> 
+              <div id ="6-6" class = "table-cell"></div>          
+            </div>
+            <div id = "row7" class = "table-row">  
+              <div id ="7-1" class = "table-cell-left">Upbeat Pace</div>
+              <div id ="7-2" class = "table-cell-2"></div> 
+              <div id ="7-3" class = "table-cell"></div> 
+              <div id ="7-4" class = "table-cell"></div> 
+              <div id ="7-5" class = "table-cell"></div> 
+              <div id ="7-6" class = "table-cell"></div>          
+            </div>
           </div>
         </div>
-          </div>
+        <!--end table-->
+      </div>
     </div>
     <div class = "w3-container w3-padding-64 w3-quarter w3-text-red">
       <p class = "special-font1">A special Baganz Quote</p>
