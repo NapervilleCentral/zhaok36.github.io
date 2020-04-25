@@ -101,7 +101,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     </div>
-    <div class="w3-third w3-container">
+
+    <div id = "twitterHeader" class="w3-row w3-border-red">
+      <h2 id = "twitterText">Twitter &#x25BD</h2>
+    </div>
+    
+    
+    
+    <div id = "twitter" class="w3-third w3-container">
       <a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/NCHSBoysXCTF?ref_src=twsrc%5Etfw">Tweets by NCHSBoysXCTF</a>
     </div>
   </div>
@@ -185,4 +192,6 @@ var slideIndex = 1;
     dots[slideIndex-1].className += " active";
   }
 </script>
+
+<script src = "misc.js"></script>
 </html>
