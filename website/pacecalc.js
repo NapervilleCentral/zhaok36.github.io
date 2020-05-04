@@ -201,18 +201,24 @@ function calcDistance(pace) {
     var sectotal = parseFloat(newhr) * 3600 + parseFloat(newmin) * 60 + parseFloat(newsec);
     var newrace = sectotal / pace;
 
-    alert(sectotal);
-    alert(newrace);
-
-
-    var output = "The calculated distance is " + Math.round(newrace * 100) / 100 + " meters" + "\n" +
-        "or " + Math.round(newrace / 1609.34 * 100) / 100 + " miles.";
-
+    if (newrace<3000)
+        var output = "The calculated distance is " + Math.round(newrace * 100) / 100 + " meters" + "\n" +
+            "or " + Math.round(newrace / 1609.34 * 1000) / 1000 + " miles.";
+    else{
+        var output = "The calculated distance is " + Math.round(newrace /1000 * 100) / 100 + " kilometers" + "\n" +
+            "or " + Math.round(newrace / 1609.34 * 1000) / 1000 + " miles.";
+    }
     return output;
 
 }
 function calcTime(pace) {
     var newrace = document.getElementById("newdistance").value;
+    var newunits = document.getElementById("customunitsf").value;
+    
+    if (newunits == "miles"){
+        newrace *= 1609.34;
+    }
+
     var newtime = pace * newrace;
 
     var newhr = Math.floor(parseFloat(newtime) / 3600);
