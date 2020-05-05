@@ -282,10 +282,7 @@ h1{
 }
 
 
-/*spreadsheets for legacy page STATE results*/
-.stater{
-  width: 32%; margin-left:100px;overflow-y:hidden; height: 245px;
-}
+
 
 /*Twitter button doesn't display by default*/
 #twitterHeader{
@@ -312,6 +309,21 @@ h1{
   width: 550px;
   object-fit: contain;
 }
+
+/*Legacy State Team pictures*/
+.stateTeamP{
+  height: 350px;
+  width: 580px;
+  padding-right: 150px;
+  object-fit: contain;
+  
+}
+
+/*spreadsheets for legacy page STATE results*/
+.stater{
+  width: 50%; margin-left:100px;overflow-y:hidden; height: 245px;
+}
+
 
 /* End extract */
 html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
