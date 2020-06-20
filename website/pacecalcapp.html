@@ -3,7 +3,7 @@
     <div class = "calc-background">
           <p id = "firstp"> Enter your official race time to calculate your paces.</p>
                 <select id="racedistance" name="racedistance">
-                  <option value="-1">choose a race</option>
+                  <option value="-1">Choose a race</option>
                   <option value="800">800 or half mile</option>
                   <option value="1600">1600 or mile</option>         
                   <option value="3200">3200 or two mile</option>
@@ -88,14 +88,15 @@
     </div>
     <h1>Custom Pace Calculator</h1>
     <div class = "calc-background">
-            <p>Enter a base distance and time that you have run. 
+            <p>Enter a corresponding distance and time that you have run. 
               This will be the pace that is used to calculate the time for a given distance 
-            or the distance for a given amount of time. Works mostly.</p>
+            or the distance for a given amount of time. This feature is intended to be used for distances and times 
+            shorter than the original.</p>
             <form id="custompacecalc">
               <label for="originaldistance">Your Race:</label>
               <input type="number" id="originaldistance" name="originaldistance">
               <select id="customunitsi" name="customunitsi">
-                  <option value="-1">choose units</option>
+                  <option value="-1">Choose units</option>
                   <option value="meters">meters</option>
                   <option value="miles">miles</option>
               </select>
@@ -270,8 +271,9 @@ function calcPreset() {
 }
 
 function calcCustomPace() {
-    var error = false;
+    var emptyError = false;
     var output = "Error";
+    var badInput = false;
 
     var initialrace = document.getElementById("originaldistance").value;
     var initialunits = document.getElementById("customunitsi").value;
@@ -285,7 +287,7 @@ function calcCustomPace() {
     }
     else {
         //sends an error message for bad inputs 
-        error = true;
+        emptyError = true;
     }
 
     var sec = document.getElementById("customsecondsi").value;
@@ -303,7 +305,10 @@ function calcCustomPace() {
 
 
     if (!newrace && !(newsec || newmin || newhr)) {
-        error = true;
+        emptyError = true;
+    }
+    else if (initialrace<0 || sec<0 || min<0 || hr<0 || newsec<0 || newmin<0 || newhr<0){
+        badInput = true;
     }
     else if (!newrace) {
         //this will set calcdistance as a default if no boxes are left unfilled
@@ -314,8 +319,14 @@ function calcCustomPace() {
     }
 
 
-    if (error) {
-        alert("Error: please fill in all appropriate boxes.")
+    if (emptyError) {
+        alert("Error: please fill in all appropriate boxes.");
+    }
+    else if (badInput){
+        alert("Please enter appropriate time or distance values.");
+    }
+    else if (output.includes("NaN")){
+        alert("Your input caused an error. Please try again.");
     }
     else {
         document.getElementById("calculatedpace").innerHTML = output;
@@ -361,13 +372,13 @@ function calcTime(pace) {
     }
 
     if (newhr == 0) {
-        var output = "the calculated time is " + newmin + ":" + newsec;
+        var output = "The calculated time is " + newmin + ":" + newsec;
     }
     else {
         if (newmin <= 9) {
             newmin = "" + 0 + newmin;
         }
-        var output = "the calculated time is " + newhr + ":" + newmin + ":" + newsec;
+        var output = "The calculated time is " + newhr + ":" + newmin + ":" + newsec;
     }
     return output;
 }
@@ -390,4 +401,10 @@ function calcTime(pace) {
 #head0{border-left:2px solid black}
 #head1{border-left:2px solid black}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+@media screen and (min-width:320px) and (max-width:415px){
+    #preset-table,#header-row{font-size: 10px; font-weight:normal}
+    .calc-background{padding:2px}
+    .table-head-cell{padding:3px}
+    .table-cell-left{padding:3px}
+}
 </style>
