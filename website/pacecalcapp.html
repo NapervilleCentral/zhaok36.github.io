@@ -1,0 +1,393 @@
+<body>
+    <h1>Preset Pace Calculator</h1>
+    <div class = "calc-background">
+          <p id = "firstp"> Enter your official race time to calculate your paces.</p>
+                <select id="racedistance" name="racedistance">
+                  <option value="-1">choose a race</option>
+                  <option value="800">800 or half mile</option>
+                  <option value="1600">1600 or mile</option>         
+                  <option value="3200">3200 or two mile</option>
+                  <option value="4800">4800 or three mile</option>
+                </select>
+              <label for="customhoursi">Minutes:</label>
+              <input type="number" id="initialmin" name="initialmin">
+              <label for="customminutesi">Seconds:</label>
+              <input type="number" id="initialsec" name="initialsec">
+            <input type="button" value="Calculate!" id="presetcalcbutton"/>
+            <br>
+            <h5>Calculated paces will appear in the chart below</h5>
+            <h6>Note: These paces are based off of general estimates, they will not be necessarily accurate for every person at every distance.</h6>
+            <div id ="preset-table" class = "w3-red basic-border-round">
+              <div id = "header-row" class = "basic-border pacecalctable">  
+                <div id = "head0" class = "table-head-cell"></div>
+                <div id = "head1" class = "table-head-cell">Distance 1</div>  
+                <div id = "head2" class = "table-head-cell">Distance 2</div>  
+                <div id = "head3" class = "table-head-cell">Distance 3</div>  
+                <div id = "head4" class = "table-head-cell">Distance 4</div>  
+                <div id = "head5" class = "table-head-cell">Race Distance</div>           
+              </div>
+              <div id = "table-body">
+                <div id = "row1" class = "table-row">  
+                  <div id ="1-1" class = "table-cell-left">800  Pace</div>
+                  <div id ="1-2" class = "table-cell-2"></div> 
+                  <div id ="1-3" class = "table-cell"></div> 
+                  <div id ="1-4" class = "table-cell"></div> 
+                  <div id ="1-5" class = "table-cell"></div> 
+                  <div id ="1-6" class = "table-cell"></div>         
+                </div> 
+                <div id = "row2" class = "table-row">  
+                  <div id ="2-1" class = "table-cell-left">1600 Pace</div>
+                  <div id ="2-2" class = "table-cell-2"></div> 
+                  <div id ="2-3" class = "table-cell"></div> 
+                  <div id ="2-4" class = "table-cell"></div> 
+                  <div id ="2-5" class = "table-cell"></div> 
+                  <div id ="2-6" class = "table-cell"></div>          
+                </div>
+                <div id = "row3" class = "table-row">  
+                  <div id ="3-1" class = "table-cell-left">3200  Pace</div>
+                  <div id ="3-2" class = "table-cell-2"></div> 
+                  <div id ="3-3" class = "table-cell"></div> 
+                  <div id ="3-4" class = "table-cell"></div> 
+                  <div id ="3-5" class = "table-cell"></div> 
+                  <div id ="3-6" class = "table-cell"></div>          
+                </div>
+                <div id = "row4" class = "table-row">  
+                  <div id ="4-1" class = "table-cell-left">Three Mile Pace</div>
+                  <div id ="4-2" class = "table-cell-2"></div> 
+                  <div id ="4-3" class = "table-cell"></div> 
+                  <div id ="4-4" class = "table-cell"></div> 
+                  <div id ="4-5" class = "table-cell"></div> 
+                  <div id ="4-6" class = "table-cell"></div>          
+                </div>
+                <div id = "row5" class = "table-row">  
+                  <div id ="5-1" class = "table-cell-left">CV Pace</div>
+                  <div id ="5-2" class = "table-cell-2"></div> 
+                  <div id ="5-3" class = "table-cell"></div> 
+                  <div id ="5-4" class = "table-cell"></div> 
+                  <div id ="5-5" class = "table-cell"></div> 
+                  <div id ="5-6" class = "table-cell"></div>          
+                </div>
+                <div id = "row6" class = "table-row">  
+                  <div id ="6-1" class = "table-cell-left">Tempo Pace</div>
+                  <div id ="6-2" class = "table-cell-2"></div> 
+                  <div id ="6-3" class = "table-cell"></div> 
+                  <div id ="6-4" class = "table-cell"></div> 
+                  <div id ="6-5" class = "table-cell"></div> 
+                  <div id ="6-6" class = "table-cell"></div>          
+                </div>
+                <div id = "row7" class = "table-row">  
+                  <div id ="7-1" class = "table-cell-left">Upbeat Pace</div>
+                  <div id ="7-2" class = "table-cell-2"></div> 
+                  <div id ="7-3" class = "table-cell"></div> 
+                  <div id ="7-4" class = "table-cell"></div> 
+                  <div id ="7-5" class = "table-cell"></div> 
+                  <div id ="7-6" class = "table-cell"></div>          
+                </div>
+              </div>
+            </div>
+    </div>
+    <h1>Custom Pace Calculator</h1>
+    <div class = "calc-background">
+            <p>Enter a base distance and time that you have run. 
+              This will be the pace that is used to calculate the time for a given distance 
+            or the distance for a given amount of time. Works mostly.</p>
+            <form id="custompacecalc">
+              <label for="originaldistance">Your Race:</label>
+              <input type="number" id="originaldistance" name="originaldistance">
+              <select id="customunitsi" name="customunitsi">
+                  <option value="-1">choose units</option>
+                  <option value="meters">meters</option>
+                  <option value="miles">miles</option>
+              </select>
+              <p>Your time:</p> 
+    
+              <label for="customhoursi">Hours:</label>
+              <input type="number" id="customhoursi" name="customhoursi">
+              <label for="customminutesi">Minutes:</label>
+              <input type="number" id="customminutesi" name="customminutesi">
+              <label for="customsecondsi">Seconds:</label>
+              <input type="number" id="customsecondsi" name="customsecondsi">
+            </form>
+          </div>
+    
+    <h1></h1>
+    <div class = "calc-background">
+            <p>Converted to</p> 
+            <form>
+              <label for="newdistance"></label>
+              <input type="text" id="newdistance" name="newdistance">
+    
+              <select id="customunitsf" name="customunitsf">
+                  <option value="-1">choose units</option>
+                  <option value="meters">meters</option>
+                  <option value="miles">miles</option>
+              </select>
+              <p>or</p> 
+              <label for="customhoursf">Hours:</label>
+                <input type="number" id="customhoursf" name="customhoursf">
+              <label for="customminutesf">Minutes:</label>
+                <input type="number" id="customminutesf" name="customminutesf">
+              <label for="customsecondsf">Seconds:</label>
+                <input type="number" id="customsecondsf" name="customsecondsf">
+              <br><br>
+              <input type="button" value = "Calculate!" id="customcalcbutton" name="customcalcbutton"/>
+              <br>
+            </form>
+            <p id="calculatedpace"></p>
+          </div>
+</body>
+<script>
+document.getElementById("presetcalcbutton").addEventListener("click", calcPreset);
+document.getElementById("customcalcbutton").addEventListener("click", calcCustomPace);
+
+function secToMinSec(totalseconds){
+    var output = "";
+
+    if (totalseconds <=90){
+        output = Math.round(totalseconds*100)/100;
+    }
+    else{
+        var minutes = Math.floor(totalseconds/60);
+        var seconds = totalseconds-(minutes*60);
+        
+        seconds= Math.round(seconds*100)/100;
+        if (seconds<10){
+            seconds = "0"+seconds;
+        }
+        output = minutes + ":" + seconds;
+    }
+
+    return output;
+}
+
+function calcPreset() {
+    var error = false;
+
+    var initialrace = document.getElementById("racedistance").value;
+    var initialmin = document.getElementById("initialmin").value;
+    var initialsec = document.getElementById("initialsec").value;
+
+    
+    if (!initialrace || !initialmin || !initialsec) {
+        error = true;
+    }
+    else {
+        var seconds = parseFloat(initialmin) * 60 + parseFloat(initialsec);
+        var pace = seconds / initialrace; //in seconds per meter
+        var miletime;
+        
+        if (initialrace == 800){
+            miletime = (pace*800+15) *2;       
+        }
+        else if (initialrace == 1600){
+            miletime = pace *1600;
+        }
+        else if (initialrace == 3200){
+            miletime = (pace*1600)-20;
+        }
+        else if (initialrace == 4800){
+            miletime = (pace*1600)-35;
+        }
+        else{
+            error = true;
+        }
+        
+        var time800 = (miletime-30)/2;
+        var twomiletime = (miletime + 20); 
+        var threemiletime = (miletime + 35);
+        var CVtime = miletime + 45;
+        var tempotime = miletime + 60; 
+        var upbeattime = miletime + 105; 
+
+        var half200 = time800/4;
+        var half250 = time800/800 *250;
+        var half400 = time800/800 * 400;
+        var halfrace = time800;
+
+        var mile300 = miletime / 1600 * 300;
+        var mile400 = miletime / 1600 * 400;
+        var mile600 = miletime / 1600 * 600;
+        var milerace = miletime;
+        
+        var twomile800 = twomiletime / 1600 * 800;
+        var twomile1000 = twomiletime / 1600 * 1000;
+        var twomile1200 = twomiletime / 1600 * 1200;
+        var twomile1600 = twomiletime;
+        var twomilerace = twomiletime * 2;
+
+        var threemile1000 = threemiletime / 1600 *1000;
+        var threemile1200 = threemiletime / 1600 * 1200;
+        var threemile1600 = threemiletime; 
+        var threemile2400 = threemiletime * 1.5;
+        var threemilerace = threemiletime * 3;
+
+        var CV800 = CVtime/1600 *800;
+        var CV1000 = CVtime/1600 * 1000;
+        var CV1200 = CVtime/1600 * 1200;
+        var CV1600 = CVtime;
+
+        var tempo1600 = tempotime;
+        var upbeat1600 = upbeattime;
+
+    }
+
+
+    if (error) {
+        alert("Error: please fill in all appropriate boxes.")
+    }
+    else {
+        //output, is there a better way?
+        document.getElementById("1-2").innerHTML = "200 in " +secToMinSec(half200);
+        document.getElementById("1-3").innerHTML = "250 in " + secToMinSec(half250);
+        document.getElementById("1-4").innerHTML = "400 in " + secToMinSec(half400);
+        document.getElementById("1-6").innerHTML = "race time: " + secToMinSec(halfrace);
+
+        document.getElementById("2-2").innerHTML = "300 in " +secToMinSec(mile300);
+        document.getElementById("2-3").innerHTML = "400 in " + secToMinSec(mile400);
+        document.getElementById("2-4").innerHTML = "600 in " + secToMinSec(mile600);
+        document.getElementById("2-6").innerHTML = "race time: " + secToMinSec(milerace);
+
+        document.getElementById("3-2").innerHTML = "800 in " +secToMinSec(twomile800);
+        document.getElementById("3-3").innerHTML = "1000 in " + secToMinSec(twomile1000);
+        document.getElementById("3-4").innerHTML = "1200 in " + secToMinSec(twomile1200);
+        document.getElementById("3-5").innerHTML = "1600 in " + secToMinSec(twomile1600);
+        document.getElementById("3-6").innerHTML = "race time: " + secToMinSec(twomilerace);
+
+        document.getElementById("4-2").innerHTML = "1000 in " +secToMinSec(threemile1000);
+        document.getElementById("4-3").innerHTML = "1200 in " + secToMinSec(threemile1200);
+        document.getElementById("4-4").innerHTML = "1600 in " + secToMinSec(threemile1600);
+        document.getElementById("4-5").innerHTML = "1.5 mile in " + secToMinSec(threemile2400);
+        document.getElementById("4-6").innerHTML = "race time: " + secToMinSec(threemilerace);
+        
+        document.getElementById("5-2").innerHTML = "800 in " +secToMinSec(CV800);
+        document.getElementById("5-3").innerHTML = "1000 in " + secToMinSec(CV1000);
+        document.getElementById("5-4").innerHTML = "1200 in " + secToMinSec(CV1200);
+        document.getElementById("5-5").innerHTML = "1600 in " + secToMinSec(CV1600);
+
+        document.getElementById("6-2").innerHTML = "1600 in " +secToMinSec(tempo1600);
+        document.getElementById("7-2").innerHTML = "1600 in " +secToMinSec(upbeat1600);
+    }
+}
+
+function calcCustomPace() {
+    var error = false;
+    var output = "Error";
+
+    var initialrace = document.getElementById("originaldistance").value;
+    var initialunits = document.getElementById("customunitsi").value;
+
+    // make sure the units are in meters for easy math
+    if (initialunits == "miles") {
+        initialrace *= 1609.34;
+    }
+    else if (initialunits == "meters") {
+        //proceed as normal
+    }
+    else {
+        //sends an error message for bad inputs 
+        error = true;
+    }
+
+    var sec = document.getElementById("customsecondsi").value;
+    var min = document.getElementById("customminutesi").value;
+    var hr = document.getElementById("customhoursi").value;
+
+    var sectotal = parseFloat(hr) * 3600 + parseFloat(min) * 60 + parseFloat(sec);
+    var pace = sectotal / initialrace;//pace in seconds/meter
+
+    //determine which kind of value to calculate 
+    var newrace = document.getElementById("newdistance").value;
+    var newsec = document.getElementById("customsecondsf").value;
+    var newmin = document.getElementById("customminutesf").value;
+    var newhr = document.getElementById("customhoursf").value;
+
+
+    if (!newrace && !(newsec || newmin || newhr)) {
+        error = true;
+    }
+    else if (!newrace) {
+        //this will set calcdistance as a default if no boxes are left unfilled
+        output = calcDistance(pace);
+    }
+    else {
+        output = calcTime(pace);
+    }
+
+
+    if (error) {
+        alert("Error: please fill in all appropriate boxes.")
+    }
+    else {
+        document.getElementById("calculatedpace").innerHTML = output;
+    }
+
+
+}
+
+function calcDistance(pace) {
+    var newsec = document.getElementById("customsecondsf").value;
+    var newmin = document.getElementById("customminutesf").value;
+    var newhr = document.getElementById("customhoursf").value;
+
+    var sectotal = parseFloat(newhr) * 3600 + parseFloat(newmin) * 60 + parseFloat(newsec);
+    var newrace = sectotal / pace;
+
+    if (newrace<3000)
+        var output = "The calculated distance is " + Math.round(newrace * 100) / 100 + " meters" + "\n" +
+            "or " + Math.round(newrace / 1609.34 * 1000) / 1000 + " miles.";
+    else{
+        var output = "The calculated distance is " + Math.round(newrace /1000 * 100) / 100 + " kilometers" + "\n" +
+            "or " + Math.round(newrace / 1609.34 * 1000) / 1000 + " miles.";
+    }
+    return output;
+
+}
+function calcTime(pace) {
+    var newrace = document.getElementById("newdistance").value;
+    var newunits = document.getElementById("customunitsf").value;
+    
+    if (newunits == "miles"){
+        newrace *= 1609.34;
+    }
+
+    var newtime = pace * newrace;
+
+    var newhr = Math.floor(parseFloat(newtime) / 3600);
+    var newmin = Math.floor(parseFloat(newtime - newhr * 3600) / 60);
+    var newsec = Math.round(parseFloat(newtime - newhr * 3600 - newmin * 60) * 100) / 100;
+
+    if (newsec <= 9) {
+        newsec = "" + 0 + newsec;
+    }
+
+    if (newhr == 0) {
+        var output = "the calculated time is " + newmin + ":" + newsec;
+    }
+    else {
+        if (newmin <= 9) {
+            newmin = "" + 0 + newmin;
+        }
+        var output = "the calculated time is " + newhr + ":" + newmin + ":" + newsec;
+    }
+    return output;
+}
+</script>
+<style>
+#preset-table { display:table;}
+#header-row {display:table-header-group;font-weight:bold;font-size: 15px;}
+.table-head-cell{display:table-cell;padding:10px;border-bottom: 2px solid black;border-left: 1px solid black;}
+#table-body{display:table-row-group;}
+.table-row{display:table-row;}
+.table-cell-left{display:table-cell; font-weight: bold; padding:4px; border-left: 2px solid black;border-bottom: 2px solid black;}
+.table-cell-2{display:table-cell;padding-left: 2px; border-bottom: 2px solid black;border-left: 2px solid black;}
+.table-cell{display:table-cell;padding-left: 2px; border-bottom: 2px solid black;border-left: 1px solid black;}
+.calc-background{background-color: #948d8d; padding: 10px; border: 10px; border-radius:10px;}
+.special-font1{font-size:large; text-align: center; font-family:"Comic Sans MS";}
+.basic-border{border-width: 1px; border-style: solid; border-color: #000;}
+.basic-border-round{border-width: 3px; border-style: solid; border-color: #000;border-radius:8px;}
+.pacecalctable{column-count: 6; column-gap: 20px; column-rule: 2px solid black;}
+.w3-red{background-color:#f72d2d;color:white;}
+#head0{border-left:2px solid black}
+#head1{border-left:2px solid black}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+</style>

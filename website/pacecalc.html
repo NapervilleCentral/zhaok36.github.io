@@ -165,57 +165,53 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row">
     <div class="w3-threequarter w3-container">
       <h1 class="w3-text-teal">Custom Pace Calculator</h1>
-    <div class = "calc-background">
+      <div class = "calc-background">
         <p>Enter a base distance and time that you have run. 
           This will be the pace that is used to calculate the time for a given distance 
         or the distance for a given amount of time. Works mostly.</p>
-      <form id="custompacecalc">
-        <label for="originaldistance">Your Race:</label>
-        <input type="number" id="originaldistance" name="originaldistance">
-        <select id="customunitsi" name="customunitsi">
-            <option value="-1">choose units</option>
-            <option value="meters">meters</option>
-            <option value="miles">miles</option>
-        </select>
-        <p>Your time:</p> 
+        <form id="custompacecalc">
+          <label for="originaldistance">Your Race:</label>
+          <input type="number" id="originaldistance" name="originaldistance">
+          <select id="customunitsi" name="customunitsi">
+              <option value="-1">choose units</option>
+              <option value="meters">meters</option>
+              <option value="miles">miles</option>
+          </select>
+          <p>Your time:</p> 
 
-        <label for="customhoursi">Hours:</label>
-        <input type="number" id="customhoursi" name="customhoursi">
-        <label for="customminutesi">Minutes:</label>
-        <input type="number" id="customminutesi" name="customminutesi">
-        <label for="customsecondsi">Seconds:</label>
-        <input type="number" id="customsecondsi" name="customsecondsi">
-        </div>
+          <label for="customhoursi">Hours:</label>
+          <input type="number" id="customhoursi" name="customhoursi">
+          <label for="customminutesi">Minutes:</label>
+          <input type="number" id="customminutesi" name="customminutesi">
+          <label for="customsecondsi">Seconds:</label>
+          <input type="number" id="customsecondsi" name="customsecondsi">
+        </form>
+      </div>
         <img src = "images/divider.png" alt = "---text divider---">
       <div class = "calc-background">
-        <p>Coverted to</p> 
-        <label for="newdistance"></label>
-        <input type="text" id="newdistance" name="newdistance">
+        <p>Converted to</p> 
+        <form>
+          <label for="newdistance"></label>
+          <input type="text" id="newdistance" name="newdistance">
 
-        <select id="customunitsf" name="customunitsf">
-            <option value="-1">choose units</option>
-            <option value="meters">meters</option>
-            <option value="miles">miles</option>
+          <select id="customunitsf" name="customunitsf">
+              <option value="-1">choose units</option>
+              <option value="meters">meters</option>
+              <option value="miles">miles</option>
           </select>
-        <p>or</p> 
-        <label for="customhoursf">Hours:</label>
-        <input type="number" id="customhoursf" name="customhoursf">
-        <label for="customminutesf">Minutes:</label>
-        <input type="number" id="customminutesf" name="customminutesf">
-        <label for="customsecondsf">Seconds:</label>
-        <input type="number" id="customsecondsf" name="customsecondsf">
-        <br><br>
-        <input type="button" value = "Calculate!" id="customcalcbutton" name="customcalcbutton"/>
-        <br>
-      </form>
-      <p id="calculatedpace">
-        
-
-      </p>
+          <p>or</p> 
+          <label for="customhoursf">Hours:</label>
+            <input type="number" id="customhoursf" name="customhoursf">
+          <label for="customminutesf">Minutes:</label>
+            <input type="number" id="customminutesf" name="customminutesf">
+          <label for="customsecondsf">Seconds:</label>
+            <input type="number" id="customsecondsf" name="customsecondsf">
+          <br><br>
+          <input type="button" value = "Calculate!" id="customcalcbutton" name="customcalcbutton"/>
+          <br>
+        </form>
+        <p id="calculatedpace"></p>
       </div>
-  
-
-
     </div>
   </div>
 
